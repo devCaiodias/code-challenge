@@ -5,6 +5,7 @@ import { auth, db } from '../service/firebase'
 import { useState } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     isRegister: boolean
@@ -15,6 +16,7 @@ export default function AuthForm({ isRegister }: Props) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [passwordConfirm, setPasswordConfirm] = useState("")
+    const router= useRouter()
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -31,13 +33,16 @@ export default function AuthForm({ isRegister }: Props) {
 
                 // Salvando no Firestore
                 await setDoc(doc(db, "users", user.uid), {
-                    name,
+                    nome: name,
                     email,
                     points: 0,
                     challengesCompleted: 0
                 });
+
+                router.push("/pages/Dashboard")
             } else {
                 await signInWithEmailAndPassword(auth, email, password)
+                router.push("/pages/Dashboard")
             }
         } catch (error: any) {
             alert(error.message)

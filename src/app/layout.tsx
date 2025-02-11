@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MainContainer from "./components/layout/MainContainer";
+import AuthProvider from "./context/AuthContext";
 
 export const metadata: Metadata = {
   title: "CODE CHALLENGE",
@@ -16,8 +17,10 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <MainContainer >
-          {children}  
+          <AuthProvider>
+            {children}  
 
+          </AuthProvider>
         </MainContainer>
       </body>
     </html>
