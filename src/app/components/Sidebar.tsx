@@ -7,7 +7,7 @@ export default function Sidebar() {
             <Link href="/" className={style.sidelogo}>Code Challenge</Link>
             
             <nav>
-                <Link href="#" className={style.sideLink}>Login</Link>
+                <Link href="/pages/Login" className={style.sideLink}>Login</Link>
                 <Link href="#" className={style.sideLink}>Profile</Link>
                 <Link href="#" className={style.sideLink}>Challenges</Link>
             </nav>
