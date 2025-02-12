@@ -4,12 +4,10 @@ import style from '../styles/Sidebor.module.css'
 export default function Sidebar() {
     return (
         <div className={style.sidebar}>
-            <Link href="/" className={style.sidelogo}>Code Challenge</Link>
+            <h2 className={style.sidelogo}>Code Challenge</h2>
             
             <nav>
                 <Link href="/pages/Login" className={style.sideLink}>Login</Link>
-                <Link href="#" className={style.sideLink}>Profile</Link>
-                <Link href="#" className={style.sideLink}>Challenges</Link>
             </nav>
         </div>
     )

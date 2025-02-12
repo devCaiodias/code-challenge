@@ -5,13 +5,15 @@
     position: relative;
     width: 400px;
     background-color: #5959590a;
-    margin-top: 5%;
+    margin-top: 15%;
     border-radius: 10px;
 }
 
 .login_title {
     font-size: 2rem;
     padding: 20px;
+    text-decoration: none;
+    color: white;
 }
 
 .form_login input {

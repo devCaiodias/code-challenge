@@ -1,4 +1,5 @@
-import Sidebar from "../Sidebar"
+import SidebarDash from "../SideBarDash"
+
 
 interface Props {
     children: React.ReactNode
@@ -9,7 +10,7 @@ interface Props {
 export default function MainContainer({children}: Readonly<Props>) {
     return (
         <>
-            <Sidebar />
+            <SidebarDash />
             {children}
         </>
     )

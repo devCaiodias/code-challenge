@@ -16,12 +16,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <MainContainer >
           <AuthProvider>
             {children}  
 
           </AuthProvider>
-        </MainContainer>
       </body>
     </html>
   );

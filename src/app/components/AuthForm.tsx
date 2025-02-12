@@ -61,7 +61,7 @@ export default function AuthForm({ isRegister }: Props) {
 
     return (
         <div className={style.logincontainer}>
-            <h2 className={style.login_title}>Code Challenge</h2>
+            <Link href="/" className={style.login_title}>Code Challenge</Link>
             
             <form onSubmit={handleSubmit} className={style.form_login}>
                 {isRegister && (
