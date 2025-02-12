@@ -1,0 +1,59 @@
+.container_side {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.link_principal {
+    display: flex;
+    align-items: center;
+}
+
+.link_principal h1 {
+    margin: 20px 40px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.link_principal h1 span {
+    color: rgb(255, 121, 11);
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 0 0 25px rgb(255, 121, 11);
+}
+
+.link_principal a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+.link_principal a:hover {
+    border-bottom: 2px solid white;
+}
+
+.User a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+}
+
+.User a:hover {
+    border-bottom: 2px solid white;
+}
+
+.User button {
+    padding: 10px 20px;
+    background: none ;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s linear;
+}
+
+.User button:hover {
+    background-color: white;
+    color: black;
+}

@@ -40,10 +40,10 @@ export default function AuthForm({ isRegister }: Props) {
                     challengesCompleted: 0
                 });
 
-                router.push("/pages/Dashboard")
+                router.push("/pages/Challanges")
             } else {
                 await signInWithEmailAndPassword(auth, email, password)
-                router.push("/pages/Dashboard")
+                router.push("/pages/Challanges")
             }
         } catch (error: any) {
             alert(error.message)
@@ -53,7 +53,7 @@ export default function AuthForm({ isRegister }: Props) {
     const handleGoogle = async () => {
         try {
             await signInWithPopup(auth, googleProvider);
-            router.push("/pages/Dashboard")
+            router.push("/pages/Challanges")
         }catch (error: any) {
             alert("Erro ao entrar com google" + error.message)
         }
