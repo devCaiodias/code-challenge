@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link'
 import style from '../styles/AuthForm.module.css'
-import { auth, db } from '../service/firebase'
+import { auth, db, googleProvider } from '../service/firebase'
 import { useState } from 'react'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { useRouter } from 'next/navigation'
+import { FaGoogle } from "react-icons/fa";
 
 interface Props {
     isRegister: boolean
@@ -46,6 +47,15 @@ export default function AuthForm({ isRegister }: Props) {
             }
         } catch (error: any) {
             alert(error.message)
+        }
+    }
+
+    const handleGoogle = async () => {
+        try {
+            await signInWithPopup(auth, googleProvider);
+            router.push("/pages/Dashboard")
+        }catch (error: any) {
+            alert("Erro ao entrar com google" + error.message)
         }
     }
 
@@ -97,6 +107,9 @@ export default function AuthForm({ isRegister }: Props) {
                     )}
                 </div>
             </form>
+            <button onClick={handleGoogle} className={style.btn_goo}>
+                <FaGoogle size={25} />
+            </button>
         </div>
     )
 }

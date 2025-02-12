@@ -36,7 +36,6 @@
     background: none;
     transition: .5s linear;
     color: white;
-    margin-bottom: 40px;
 }
 
 .login_btn button:hover {
@@ -48,9 +47,24 @@
     text-decoration: none;
     color: white;
     margin-left: 20px;
-    margin-bottom: 40px;
 }
 
 .login_resgister:hover {
     border-bottom: 2px solid white;
+}
+
+.btn_goo {
+    background: none;
+    color: white;
+    border: none;
+    size: 40px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.btn_goo:hover {
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
 }
