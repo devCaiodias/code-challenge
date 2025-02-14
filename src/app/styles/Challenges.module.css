@@ -1,0 +1,9 @@
+.containerCart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fillter_div {
+    background-color: rgba(34, 34, 34, 0.199);
+    width: 300px;
+}

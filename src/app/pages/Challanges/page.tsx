@@ -3,6 +3,8 @@ import ChallengesCard from "../../components/ChallangesCard";
 import { useState, useEffect } from "react";
 import { db } from "@/app/service/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import style from "../../styles/Challenges.module.css"
+import Link from "next/link";
 
 interface Challenge {
   id: string;
@@ -48,10 +50,20 @@ export default function Challenges() {
   
 
   return (
-    <div>
-      {challege.map((challenge: any) => (
-        <ChallengesCard key={challenge.id} {...challenge} />
-      ))}
+    <div className={style.containerCart}>
+      
+      <div>
+        {challege.map((challenge: any) => (
+          <Link key={challenge.id} href={`./Challanges/${challenge.id}`}>
+          <ChallengesCard {...challenge} />
+          </Link>
+        ))}
+      </div>
+      <div className={style.fillter_div}>
+        <h3>Fillter</h3>
+
+        <option value="">Fácil</option>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 .challengeCard {
     width: 500px;
-    height: 100px;
+    height: 130px;
     margin: 20px 40px;
     padding: 10px;
     background-color: rgba(54, 54, 54, 0.274);
     position: relative;
+    border-radius: 10px;
 }
 
 .challenge_title {
@@ -15,6 +16,7 @@
 
 .challenge_description {
     padding: 10px 15px;
+    margin: 10px;
 }
 
 .difficulty {
