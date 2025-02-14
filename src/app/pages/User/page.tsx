@@ -2,6 +2,15 @@
 export default function MyUser() {
     
      return (
-      <h1>MyUser</h1>
+      <>
+        <div>
+          <h1>MyUser</h1>
+        </div>
+        <div>
+          <p>Total Pontos</p>
+          <p>Completo</p>
+        </div>
+      
+      </>
     )
 }
